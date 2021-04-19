@@ -1,0 +1,1 @@
+execute as @a[tag=executor] at @s run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:["firsttag"]}
