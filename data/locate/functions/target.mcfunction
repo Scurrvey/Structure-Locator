@@ -1,1 +1,1 @@
-execute store result score target target run locate fortress
+execute store success score success target run execute store result score target target run locate village
