@@ -23,4 +23,8 @@ scoreboard players operation PosX position += maths2 maths
 scoreboard players operation maths2 maths *= maths2 maths
 scoreboard players operation maths1 maths = r1 r1r2
 scoreboard players operation maths1 maths -= maths2 maths
+execute if score maths1 maths < 0 maths run tellraw @a {"text":"Negative input", "color":"red"}
+execute if score maths1 maths < 0 maths run scoreboard players operation maths1 maths *= -1 maths
+execute if score maths1 maths < 0 maths run scoreboard players set neg working 1
+execute if score maths1 maths >= 0 maths run scoreboard players set neg working 0
 scoreboard players operation in input = maths1 maths

@@ -14,3 +14,4 @@ scoreboard players set 2 maths 2
 scoreboard objectives add target dummy
 scoreboard objectives add safe dummy
 scoreboard objectives add accuracy dummy
+scoreboard players set 0 maths 0
