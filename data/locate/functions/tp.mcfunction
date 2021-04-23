@@ -1,3 +1,4 @@
+execute if score neg working matches 1 run scoreboard players operation out output *= -1 maths
 tag @p add victim
 execute store result entity @s Pos[0] double 1 run scoreboard players get PosX position
 execute store result entity @s Pos[1] double 1 run scoreboard players get PosY position
@@ -19,7 +20,7 @@ execute as @s at @s run function locate:target
 scoreboard players operation final tpdistance = target target
 execute if score final tpdistance > @a[tag=executor, limit=1] accuracy run schedule function locate:prestart 1t 
 execute if score final tpdistance > @a[tag=executor, limit=1] accuracy run say Trying again
-execute if score final tpdistance <= @a[tag=executor, limit=1] accuracy run execute as @s at @s run schedule function locate:presafetp 1s
+execute if score final tpdistance <= @a[tag=executor, limit=1] accuracy run execute as @s at @s run schedule function locate:presafetp 1t
 
 kill @s
 tp @p[tag=victim] @s

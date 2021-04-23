@@ -8,9 +8,9 @@ execute as @e[type=armor_stand,tag=secondtag] at @s run execute unless block ~ ~
 execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute unless block ~ ~-1 ~ #nongravity run scoreboard players add safe safe 1
 execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~ ~ #nongravity run scoreboard players add safe safe 1
 execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~1 ~ #nongravity run scoreboard players add safe safe 1
+execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~-2 ~ bedrock run execute as @a[tag=executor] at @s run function locate:spread
 execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~-2 ~ bedrock run say not safe
 execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~-2 ~ bedrock run kill @s
-execute as @e[type=armor_stand,tag=secondtag, tag=!safe] at @s run execute if block ~ ~-2 ~ bedrock run execute as @a[tag=executor] at @s run function locate:spread
 execute if score safe safe matches 3.. run tag @e[tag=secondtag] add safe
 execute as @e[tag=safe] at @s run execute if block ~ ~-1 ~ water run setblock ~ ~ ~ lily_pad
 execute as @e[tag=safe] at @s run execute if block ~ ~-1 ~ lava run setblock ~ ~-1 ~ stone

@@ -1,0 +1,1 @@
+effect give @a[tag=!victim, tag=executor] resistance 3 255

@@ -1,5 +1,5 @@
 {
 	"values":[
-		"locate:rootstart", "locate:safetp"
+		"locate:rootstart", "locate:safetp", "locate:safe"
 	]
 }
